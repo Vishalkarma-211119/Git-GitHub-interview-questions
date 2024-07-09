@@ -1,0 +1,80 @@
+Basic Git Questions
+What is Git?
+Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+What are the main features of Git?
+Distributed system, performance, security, flexibility, and support for non-linear development (branches).
+
+Explain the difference between Git and GitHub.
+Git is a version control system to manage code history, while GitHub is a platform to host Git repositories and collaborate on projects.
+
+What is a repository in Git?
+A repository is a storage space where your project lives. It contains all the project files and the entire revision history.
+
+What is a commit in Git?
+A commit is a snapshot of your repository at a specific point in time. It represents a single point in the Git history.
+
+What is a branch in Git?
+A branch is a movable pointer to one of these commits. The default branch name in Git is master or main.
+
+How do you create a new branch in Git?
+git branch <branch-name>
+
+How do you switch to a branch in Git?
+git checkout <branch-name>
+
+How do you merge branches in Git?
+git merge <branch-name>
+
+What is a pull request?
+A pull request is a way to propose changes to a repository. It allows others to review the changes before they are merged.
+
+Intermediate Git Questions
+
+What is the difference between git pull and git fetch?
+git fetch downloads changes from the remote repository but doesn't integrate them into your working directory. git pull is a combination of git fetch and git merge.
+
+How do you resolve conflicts in Git?
+When a conflict occurs, Git will mark the file as conflicted and will require manual intervention to resolve the differences. You can use git status to see which files are conflicted and then edit the files to resolve conflicts before committing.
+
+What is a rebase in Git?
+Rebase is the process of moving or combining a sequence of commits to a new base commit. It allows you to maintain a cleaner project history.
+
+How do you undo the last commit?
+git reset --soft HEAD~1 (keeps changes in the working directory) or git reset --hard HEAD~1 (discards changes).
+
+What is a Git stash?
+Git stash temporarily shelves (or stashes) changes you've made to your working directory so you can work on something else and come back to the stashed changes later.
+
+Advanced Git Questions
+
+Explain the difference between git rebase and git merge.
+git merge adds a new commit to the branch, preserving the history of the source branch. git rebase moves the base of the branch to a new starting point, rewriting history.
+
+What is Git cherry-picking?
+Cherry-picking in Git means to choose a commit from one branch and apply it onto another branch.
+
+How do you revert a pushed commit?
+git revert <commit-id> creates a new commit that undoes the changes from the specified commit.
+
+What is the difference between git reset, git checkout, and git revert?
+git reset changes the current branch's history. git checkout switches between branches or restores working tree files. git revert creates a new commit that undoes the changes from a previous commit.
+
+How can you find a specific commit in Git history?
+Use git log, git log --grep=<pattern>, or git log --author=<author>.
+
+GitHub Specific Questions
+What are GitHub Actions?
+GitHub Actions is a CI/CD service that allows you to automate workflows directly in your GitHub repositories.
+
+How do you create a GitHub repository?
+Go to GitHub, click on "New repository," fill in the repository details, and click "Create repository."
+
+What is a GitHub fork?
+A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes without affecting the original project.
+
+How do you sync your fork with the original repository?
+git remote add upstream <original-repo-url>, git fetch upstream, git merge upstream/master (or upstream/main), and git push.
+
+How do you create a pull request on GitHub?
+Navigate to the original repository, click on "Pull Requests," then "New pull request," select the branches to compare, and create the pull request with a title and description.
